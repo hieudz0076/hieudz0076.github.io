@@ -1,51 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Website</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      color: #333;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background-color: #333;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    main {
-      padding: 20px;
-      text-align: center;
-    }
-    footer {
-      background-color: #333;
-      color: white;
-      padding: 10px;
-      text-align: center;
-      position: fixed;
-      width: 100%;
-      bottom: 0;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Key</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            color: #4CAF50;
+            user-select: none;
+        }
+
+        h1:hover {
+            color: #388E3C;
+        }
+
+        #keyMessage {
+            display: none;
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 18px;
+            color: green;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Welcome to My Website!</h1>
-    <p>This is my first GitHub Pages website.</p>
-  </header>
+    <div class="container">
+        <h1 id="getKeyText">Get Key</h1>
+        <p id="keyMessage">Chúc mừng! Key của bạn là: <span id="key"></span></p>
+    </div>
 
-  <main>
-    <h2>Here’s some content for you</h2>
-    <p>Thanks for visiting my website. More content will come soon!</p>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 My Website</p>
-  </footer>
+    <script>
+        document.getElementById("getKeyText").addEventListener("click", function() {
+            let generatedKey = "123456";
+            document.getElementById("key").textContent = generatedKey;
+            document.getElementById("keyMessage").style.display = "block";
+        });
+    </script>
 </body>
 </html>
